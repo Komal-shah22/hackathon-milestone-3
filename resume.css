@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+.resume {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.left-column {
+    background-color: #050833;
+    width: 40%;
+    padding: 20px;
+    color: white;
+}
+
+.right-column {
+    width: 60%;
+    padding: 20px;
+    color: #131212;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid white;
+    animation: scaleUp 1.5s ease;
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+
+.personal-info h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top: 10px;
+}
+
+.personal-info h3 {
+    text-align: center;
+    color: #f5f4f8;
+}
+ h3{
+    color: #050622;
+}
+
+#contact {
+    color: white;
+    text-align: center;
+}
+
+.social ul, .skills ul {
+    list-style-type: none;
+    margin-top: 20px;
+    color: white;
+}
+.social a{
+    text-decoration: none;
+    color: #f5f2f2;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.skills h2 {
+    font-size: 20px;
+    color: #fcfcfc;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #7c7a7a;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+#skills-content {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+.hidden {
+    max-height: 0;
+    opacity: 0;
+    display: none;
+}
+.skill-percentage {
+    height: 100%;
+    background-color: #f7f1f1;
+}
+#toggle-skills-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 16px;
+}
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #ccc;
+}
+.rotate-animation {
+    animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+
+.left-column {
+    position: relative; 
+}
+
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #131212;
+}
+body.dark-theme {
+    background-color: #fdf9f9;
+    color: #f7f2f2;
+}
+body.dark-theme .resume {
+    background-color: #272626;
+}
+body.dark-theme .right-column {
+    color: #f7f2f2;
+}
+body.dark-theme .left-column {
+    background-color: #080808;
+}
+body.dark-theme button {
+    background-color: #080808;
+}
+body.dark-theme h3 {
+    color: #f8f6f6;
+}
+
+
+.certificates ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certificates ul li {
+    display: flex;
+    align-items: center;
+    color: rgb(245, 239, 239);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.certificates ul li i {
+    margin-right: 10px;
+    color: #f8f4f4; 
+    font-size: 18px;
+}
+.skill-item, .social ul li, .experience h3, .education h3, .certificates ul button {
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.skill-item:nth-child(1) { animation-delay: 0.2s; }
+.skill-item:nth-child(2) { animation-delay: 0.4s; }
+.skill-item:nth-child(3) { animation-delay: 0.6s; }
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #050833;
+    color: #f1ecec;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2b2f77;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+.social h2, .skills h2, .experience h2, .education h2, .certificates h2, .languages h2 {
+    font-size: 18px;
+    color: rgb(121, 117, 117);
+    background-color: transparent;
+    padding: 0 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.social h2::before, .social h2::after,
+.skills h2::before, .skills h2::after,
+.experience h2::before, .experience h2::after,
+.education h2::before, .education h2::after,
+.languages h2::before, .languages h2::after,
+.certificates h2::before, .certificates h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: rgb(80, 78, 78);
+    transform: translateY(-50%);
+}
+.social h2::before, .skills h2::before, .experience h2::before, .education h2::before, .certificates h2::before, .languages h2::before {
+    left: 0;
+}
+
+.social h2::after, .skills h2::after, .experience h2::after, .education h2::after, .certificates h2::after, .languages h2::after {
+    right: 0;
+}
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+

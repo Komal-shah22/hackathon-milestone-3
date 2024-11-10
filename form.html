@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="resumeForm">
+                   <div class="left-panel">
+                    <div class="form-section">
+                        <label for="profilePicture">Profile Picture:</label>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Komal Fareed" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="title">Job Title:</label>
+                        <input type="text" id="title" name="title" placeholder="Full Stack Developer" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="Karachi, Pakistan" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="contact">Contact:</label>
+                        <input type="text" id="contact" name="contact" placeholder="+92 300 1234567" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="komalfareed93@gmail.com" required>
+                    </div>
+                    <div class="form-section">
+                        <label for="skills">Skills (comma separated):</label>
+                        <input type="text" id="skills" name="skills" placeholder="HTML, CSS, JavaScript, React, etc." required>
+                    </div>
+                </div>
+                 <div class="right-panel">
+                    <div class="form-section">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio" placeholder="Short bio about yourself" required></textarea>
+                    </div>
+                    <div class="form-section">
+                        <label for="experience">Experience:</label>
+                        <textarea id="experience" name="experience" placeholder="Describe your work experience" required></textarea>
+                    </div>
+                    <div class="form-section">
+                        <label for="education">Education:</label>
+                        <textarea id="education" name="education" placeholder="Your educational background" required></textarea>
+                    </div>
+                    <div class="form-section">
+                        <label for="languages">Languages:</label>
+                        <input type="text" id="languages" name="languages" placeholder="English, Urdu, etc." required>
+                    </div>
+                    <div class="form-section">
+                        <label for="interests">Interests (comma separated):</label>
+                        <input type="text" id="interests" name="interests" placeholder="Reading, Coding, etc." required>
+                    </div>
+                    <button type="submit">Generate Resume</button>
+                </div>
+            </form>
+        </div>
+        <div id="generatedResume" class="resume-preview">
+            <h2>Generated Resume</h2>
+            <div id="resumeContent"></div>
+            <button id="btn"><i class="fa-solid fa-share-nodes"></i></button>
+         </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
